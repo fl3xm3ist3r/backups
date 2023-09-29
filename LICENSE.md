@@ -1,3 +1,5 @@
+[Return to Home](./README.md)
+
 # The Backupware License
 
 "**Backupware License**" (Version 1.0) - [29.09.2023]

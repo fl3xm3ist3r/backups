@@ -4,6 +4,7 @@ This repository serves as a personal backup archive for my configurations and se
 
 ## Featured Programs
 
+- [Spicetify](./spicetify/README.md)
 - Stay tuned for updates on more programs to come!
 
 ## License
