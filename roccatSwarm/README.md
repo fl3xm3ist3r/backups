@@ -16,14 +16,14 @@ Welcome to the Roccat Swarm installation guide!
     **Keyboard** (Vulcan Aimo):
     1. Open Roccat Swarm and navigate to **VULCAN AIMO**.
     2. On the bottom left in **GAME PROFILES** select the dropdown of **PROFILE-SLOT 1**
-    3. Click on "Import Profile..."
-    5. Select [vulcanAimo.rkp](./vulcanAimo.rkp) from `~\backups\roccatSwarm`.
+    3. Click **Import Profile...** to import the Backup.
+    4. Select [vulcanAimo.rkp](./vulcanAimo.rkp) from `~\backups\roccatSwarm`.
 
     **Mouse** (Kone Aimo):
     1. Open Roccat Swarm and navigate to **KONE AIMO**.
     2. On the bottom left in **GAME PROFILES** select the dropdown of **PROFILE-SLOT 1**
-    3. Click on "Import Profile..."
-    5. Select [koneAimo.rmp](./koneAimo.rmp) from `~\backups\roccatSwarm`.
+    3. Click **Import Profile...** to import the Backup.
+    4. Select [koneAimo.rmp](./koneAimo.rmp) from `~\backups\roccatSwarm`.
 
 ### Roccat Swarm is now successfully installed and configured! <br> ʕ⁠っ⁠•⁠ᴥ⁠•⁠ʔ⁠っ
 
