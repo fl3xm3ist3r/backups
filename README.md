@@ -5,6 +5,7 @@ This repository serves as a personal backup archive for my configurations and se
 ## Featured Programs
 
 - [Spicetify](./spicetify/README.md)
+- [Roccat Swarm](./roccatSwarm/README.md)
 - [league-profile-tool](./leagueProfileTool/README.md)
 - Stay tuned for updates on more programs to come!
 
