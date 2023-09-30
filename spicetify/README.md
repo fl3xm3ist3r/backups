@@ -35,7 +35,7 @@ Welcome to the Spicetify installation guide! Spice up your Spotify experience wi
     ```
 
 5. **Restore Marketplace**
-    1. Open Spotify and navigato to **Marketplace**.
+    1. Open Spotify and navigate to **Marketplace**.
     2. Open **Marketplace Settings**.
     3. Access **Backup Settings**.
     4. Click **Import from File** to import the Backup.
