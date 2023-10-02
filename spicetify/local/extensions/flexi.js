@@ -1,4 +1,10 @@
 (function flexi() {
+    //wait for spotify to load
+    if (!Spicetify.Player.data || !Spicetify.LocalStorage) {
+		setTimeout(flexi, 4000);
+		return;
+	}
+
 	//add cat gif on top of playback progress bar
     const playbackProgressBars = document.querySelectorAll('.playback-progressbar.playback-progressbar-isInteractive:not(:has(.volume-bar__slider-container))');
     if (playbackProgressBars.length > 0) {
