@@ -133,17 +133,6 @@
 		}
 	}
 
-	function checkFullScreen(){
-		const upcomingSongDiv = document.querySelector("#flexiUpcomingSongDiv");
-		if (upcomingSongDiv) {
-			if (document.fullscreenElement) {
-				upcomingSongDiv.style.setProperty("display", "none", "important");
-			} else {
-				upcomingSongDiv.style.display = "flex";
-			}
-		}
-	}
-
 	function createUpcomingSongDiv() {
 		const upcomingSongDiv = document.createElement("div");
 		upcomingSongDiv.classList.add("main-nowPlayingWidget-nowPlaying");
@@ -200,46 +189,62 @@
 	
 	function fillInUpcomingSongDetails() {
 		const queue = Spicetify.Queue;
-		var nextTrack = queue.nextTracks[0];
+		var nextTrack = null;
 		for (let i = 0; i < queue.nextTracks.length; i++) {
-			nextTrack = queue.nextTracks[i];
-			if (!nextTrack.removed.length) {
+			var tmpNextTrack = queue.nextTracks[i];
+			if (!tmpNextTrack.removed.length && tmpNextTrack.contextTrack.uid != Spicetify.Queue.track.contextTrack.uid) {
+				nextTrack = tmpNextTrack;
 				break;
 			}
-		}	
-	
+		}
+
 		const upcomingSongTitle = document.getElementById("flexiUpcomingSongTitle");
 		const upcomingSongArtist = document.getElementById("flexiUpcomingSongArtist");
 		const upcomingSongImg = document.getElementById("flexiUpcomingSongImg");
+
+		//check if upcoming song was found
+		if(nextTrack){		
+			upcomingSongTitle.innerText = nextTrack.contextTrack.metadata.title;
 	
-		upcomingSongTitle.innerText = nextTrack.contextTrack.metadata.title;
-
-		//load artists
-		upcomingSongArtist.innerText = nextTrack.contextTrack.metadata.artist_name;
-		for (let i = 1; i > 0; i++) {
-			if (nextTrack.contextTrack.metadata['artist_name:' + i]) {
-				upcomingSongArtist.innerText += ', ' + nextTrack.contextTrack.metadata['artist_name' + i];
-			} else {
-				break;
+			//load artists
+			upcomingSongArtist.innerText = nextTrack.contextTrack.metadata.artist_name;
+			for (let i = 1; i > 0; i++) {
+				if (nextTrack.contextTrack.metadata['artist_name:' + i]) {
+					upcomingSongArtist.innerText += ', ' + nextTrack.contextTrack.metadata['artist_name' + i];
+				} else {
+					break;
+				}
+			}	
+	
+			//load image or default if no image was found
+			if(!nextTrack.contextTrack.metadata.image_url){
+				upcomingSongImg.style.display = "none";
 			}
-		}	
-
-		//load image or default if no image was found
-		if(!nextTrack.contextTrack.metadata.image_url){
-			upcomingSongImg.style.display = "none";
+			else{
+				upcomingSongImg.style.display = "flex";
+				upcomingSongImg.src = nextTrack.contextTrack.metadata.image_url;
+			}
 		}
 		else{
-			upcomingSongImg.style.display = "flex";
-			upcomingSongImg.src = nextTrack.contextTrack.metadata.image_url;
+			upcomingSongTitle.innerText = "FlexiNoSongWasFound";
 		}
-		
+
 		formatSongsLayout();
 	}
 	
 	function formatSongsLayout() {
 		const firstElement = document.querySelector(".main-nowPlayingWidget-nowPlaying:not(#flexiUpcomingSongDiv)");
 		const secondElement = document.getElementById("flexiUpcomingSongDiv");
-	
+
+		//no following song was found
+		const upcomingSongTitle = document.getElementById("flexiUpcomingSongTitle");
+		if(upcomingSongTitle.innerText == "FlexiNoSongWasFound"){
+			firstElement.style.flex = `0 0 ${100}%`;
+			secondElement.style.display = "none";
+			return;
+		}
+
+		//fill in values
 		firstElement.style.flex = ``;
 		secondElement.style.display = "none";
 		const firstWidth = firstElement.offsetWidth;
@@ -262,7 +267,7 @@
 		} else if (firstElementFlex <= 62 && secondElementFlex > 38 && firstElementFlex + secondElementFlex > 100) {
 			secondElementFlex = 100 - firstElementFlex;
 		}
-	
+
 		firstElement.style.flex = `0 0 ${firstElementFlex}%`;
 		secondElement.style.flex = `0 0 ${secondElementFlex}%`;
 
@@ -274,6 +279,17 @@
 
 		// ensure application is not in full screen
 		checkFullScreen();
+	}
+
+	function checkFullScreen(){
+		const upcomingSongDiv = document.querySelector("#flexiUpcomingSongDiv");
+		if (upcomingSongDiv) {
+			if (document.fullscreenElement) {
+				upcomingSongDiv.style.setProperty("display", "none", "important");
+			} else {
+				upcomingSongDiv.style.display = "flex";
+			}
+		}
 	}
 
 	waitForSpicetifyLoad();
