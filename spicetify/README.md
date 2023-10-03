@@ -4,6 +4,11 @@
 
 Welcome to the Spicetify installation guide! Spice up your Spotify experience with custom themes and extensions using these simple steps:
 
+<details>
+    <summary>See the End Result</summary>
+    <img src="./assets/preview.png">
+</details>
+
 1. **Install Spicetify and Marketplace** <br>
     Open your PowerShell and run the following commands:
     ```shell
