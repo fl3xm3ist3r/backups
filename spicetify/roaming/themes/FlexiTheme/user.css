@@ -172,11 +172,15 @@ h1 {
 	border-radius: 8px;
 }
 
-/* Making index column wider so that lighter background that 
-highlights selected song contains multi-digit song numbers */
-/* It looks good up to 4 digits, I figured that no one has playlists with more music than that ;) */
-.main-trackList-trackList.main-trackList-indexable .main-trackList-trackListRowGrid {
-	grid-template-columns: [index] 48px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px, 1fr) !important;
+/* modern scrollBar */
+.os-theme-spotify.os-host-transition > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle { 
+	border-radius: 4px;
+	width: 6px;
+	background-color: var(--spice-button-disabled); 
+} 
+
+.os-theme-spotify.os-host-transition > .os-scrollbar-vertical > .os-scrollbar-track { 
+	width: 6px; 
 }
 
 /* Text boxes in settings */
@@ -187,4 +191,15 @@ highlights selected song contains multi-digit song numbers */
 /* Facebook button */
 .x-settings-facebookButton {
 	background-color: unset !important;
+}
+
+/* Fix the scrolling in a playlist */
+.main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn {
+	margin-top: 4px;
+}
+
+.main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn 
+.Type__TypeElement-sc-goli3j-0.TypeElement-canon-type-draggable.main-entityHeader-topbarTitle {
+	margin-top: 4px;
+	margin-left: 10px;
 }

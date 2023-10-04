@@ -37,6 +37,7 @@
 				position: absolute;
 				image-rendering: pixelated;
 				background-size: 75px 75px;
+				pointer-events: none;
 			}
 
 			/* Styles to hide all extra control buttons  */
@@ -70,17 +71,6 @@
 			.Svg-sc-ytk21e-0.Svg-img-16-icon.LyricsPageIcon {
 				width: 21px;
 				height: 21px;
-			}
-
-			/* Styles to fix the scrolling in a playlist */
-			.main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn {
-				margin-top: 4px;
-			}
-
-			.main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn 
-			.Type__TypeElement-sc-goli3j-0.TypeElement-canon-type-draggable.main-entityHeader-topbarTitle {
-				margin-top: 4px;
-				margin-left: 10px;
 			}
 
 			/* Styles for the container of the current song and upcoming song */
@@ -240,7 +230,7 @@
 		const upcomingSongTitle = document.getElementById("flexiUpcomingSongTitle");
 		if(upcomingSongTitle.innerText == "FlexiNoSongWasFound"){
 			firstElement.style.flex = `0 0 ${100}%`;
-			secondElement.style.display = "none";
+			secondElement.style.setProperty("display", "none", "important");
 			return;
 		}
 

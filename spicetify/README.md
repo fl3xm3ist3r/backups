@@ -21,15 +21,15 @@ Welcome to the Spicetify installation guide! Spice up your Spotify experience wi
     1. **Add `flexi.js` Extension:** <br>
         Place [flexi.js](./local/extensions/flexi.js) from `~\backups\spicetify\local\extensions` into `C:\Users\{UserName}\AppData\Local\spicetify\Extensions`.
 
-    2. **Add `BurntSienna` Theme:** <br>
-        Place [BurntSienna](./roaming/themes) from `~\backups\spicetify\roaming\themes` into `C:\Users\{UserName}\AppData\Roaming\spicetify\Themes`.
+    2. **Add `FlexiTheme`:** <br>
+        Place [FlexiTheme](./roaming/themes/FlexiTheme/README.md) from `~\backups\spicetify\roaming\themes` into `C:\Users\{UserName}\AppData\Roaming\spicetify\Themes`.
 
 3. **Update Configuration** <br>
     Update `config-xpui.ini` located in `C:\Users\{UserName}\AppData\Roaming\spicetify`:
 
     ```config-xpui.ini
-    current_theme = BurntSienna
     extensions = flexi.js
+    current_theme = FlexiTheme
     ```
 
 4. **Apply changes** <br>
@@ -61,7 +61,7 @@ If you need visual guidance, check out these helpful screenshots:
 
 <details>
     <summary>Open Marketplace Settings</summary>
-    <img src="./assets/importMarketplaceBackupFromFile.png">
+    <img src="./assets/openMarketplaceSettings.png">
 </details>
 
 <details>
