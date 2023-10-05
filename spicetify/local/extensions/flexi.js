@@ -119,6 +119,12 @@
 				setTimeout(fillInUpcomingSongDetails, LOAD_DELAY_IN_MS);
 			});
 
+			Spicetify.Platform.PlayerAPI._queue._events.addListener('queue_update', (eventData) => {
+				if(Spicetify.Queue.nextTracks[0].contextTrack.uid != Spicetify.Queue.track.contextTrack.uid){
+					fillInUpcomingSongDetails();
+				}
+			});
+
 			setTimeout(fillInUpcomingSongDetails, LOAD_DELAY_IN_MS);
 		}
 	}
