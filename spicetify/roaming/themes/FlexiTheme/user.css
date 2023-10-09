@@ -203,3 +203,8 @@ h1 {
 	margin-top: 4px;
 	margin-left: 10px;
 }
+
+/* Fix upcoming song style */
+#upcomingSongDiv .Type__TypeElement-sc-goli3j-0.TypeElement-mesto-type.main-trackInfo-name {
+    margin-top: 0px !important;
+}
