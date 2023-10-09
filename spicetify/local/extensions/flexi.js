@@ -40,7 +40,8 @@
 
 			/* Styles to hide all extra control buttons  */
 			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button,
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button {
+			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button,
+			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-disabled-useBrowserDefaultFocusStyle.main-genericButton-button {
 				display: none;
 			}
 
