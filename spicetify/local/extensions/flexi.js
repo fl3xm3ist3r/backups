@@ -39,17 +39,18 @@
 			}
 
 			/* Styles to hide all extra control buttons  */
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button,
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button,
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-disabled-useBrowserDefaultFocusStyle.main-genericButton-button {
+			.Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button,
+			.Button-sc-1dqy6lx-0 Button-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button.ZMXGDTbwxKJhbmEDZlYy.main-nowPlayingBar-lyricsButton,
+			.Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button,
+			.Button-sc-1dqy6lx-0 Button-small-small-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button.ZMXGDTbwxKJhbmEDZlYy.main-nowPlayingBar-lyricsButton {
 				display: none;
 			}
 
 			/* Styles to explicitly show the "Song Queue" button in the UI */
 			.GlueDropTarget.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button,
+			.Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button,
 			.GlueDropTarget.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button  {
+			.Button-sc-1dqy6lx-0.Button-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button  {
 				display: flex;
 			}
 
@@ -64,14 +65,12 @@
 				margin-top: 3px;
 			}
 
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle.main-genericButton-button
-			.Svg-sc-ytk21e-0.Svg-img-16-icon.LyricsPageIcon,
-			.Button-sc-1dqy6lx-0.Button-sm-16-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle.main-genericButton-button
-			.Svg-sc-ytk21e-0.Svg-img-16-icon.LyricsPageIcon {
+			.LyricsPageIcon {
 				width: 21px;
 				height: 21px;
 			}
 		`;
+		
 		document.head.appendChild(styleElement);
 	}
 
