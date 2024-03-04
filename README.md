@@ -27,7 +27,7 @@ _Backup of League of Legends Profile Text Status._
 
 ## [Visual Studio Code](./vscode/README.md)
 
-_Backup of League of Legends Profile Text Status._
+_Backup of my Visual Studio Extensions._
 
 ## Coming soon
 
