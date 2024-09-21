@@ -29,6 +29,10 @@ _Backup of League of Legends Profile Text Status._
 
 _Backup of my Visual Studio Extensions._
 
+## [Vencord](./vencord/README.md)
+
+_My Vencord Settings._
+
 ## Coming soon
 
 _More Backups and Configurations will follow._
