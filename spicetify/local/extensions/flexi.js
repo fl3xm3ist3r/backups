@@ -1,6 +1,6 @@
 (function flexi() {
 	const SPICETIFY_LOAD_INTERVAL_IN_SECONDS = 4;
-	const CAT_GIF_URL = "https://s11.gifyu.com/images/SgXKG.gif";
+	const CAT_GIF_URL = "https://gifyu.com/image/SBU4o";
 
 	function waitForSpicetifyLoad() {
 		if (!Spicetify.Player.data || !Spicetify.LocalStorage) {
