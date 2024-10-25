@@ -21,7 +21,7 @@ _Own Theme, Script and [Spicetify Marketplace](https://github.com/spicetify/spic
 
 _Settings for **Roccat Vulcan 121 Aimo** and **Roccat Kone Aimo Remastered**._
 
-## [League-profile-tool](./leagueProfileTool/README.md)
+## [League-tools](./leagueTools//README.md)
 
 _Backup of League of Legends Profile Text Status._
 
