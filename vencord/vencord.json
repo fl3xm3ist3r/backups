@@ -222,9 +222,6 @@
             "GreetStickerPicker": {
                 "enabled": false
             },
-            "HideAttachments": {
-                "enabled": false
-            },
             "iLoveSpam": {
                 "enabled": false
             },
@@ -401,9 +398,6 @@
             "PreviewMessage": {
                 "enabled": false
             },
-            "PronounDB": {
-                "enabled": false
-            },
             "QuickMention": {
                 "enabled": false
             },
@@ -439,7 +433,9 @@
                 "chatMentions": true,
                 "memberList": true,
                 "voiceUsers": false,
-                "reactorsList": false
+                "reactorsList": false,
+                "pollResults": true,
+                "colorChatMessages": false
             },
             "SecretRingToneEnabler": {
                 "enabled": false
@@ -571,7 +567,7 @@
                 "enabled": false
             },
             "VolumeBooster": {
-                "enabled": true,
+                "enabled": false,
                 "multiplier": 2
             },
             "WhoReacted": {
@@ -596,6 +592,27 @@
             },
             "FullSearchContext": {
                 "enabled": false
+            },
+            "HideMedia": {
+                "enabled": false
+            },
+            "UserMessagesPronouns": {
+                "enabled": false
+            },
+            "DynamicImageModalAPI": {
+                "enabled": false
+            },
+            "FixImagesQuality": {
+                "enabled": false
+            },
+            "FullUserInChatbox": {
+                "enabled": false
+            },
+            "IrcColors": {
+                "enabled": false
+            },
+            "BadgeAPI": {
+                "enabled": true
             }
         },
         "notifications": {
@@ -608,8 +625,9 @@
             "authenticated": false,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
-            "settingsSyncVersion": 1726950695623
-        }
+            "settingsSyncVersion": 1742237661191
+        },
+        "eagerPatches": false
     },
     "quickCss": ""
 }
